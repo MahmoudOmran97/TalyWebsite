@@ -1,0 +1,30 @@
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    var isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en";
+    ViewData["Title"] = Localizer["TermsTitle"];
+}
+<div class="container py-5" style="max-width: 900px;">
+    <div class="card border-0 shadow-sm p-5 rounded-4">
+        <h1 class="fw-bold mb-4" style="color: var(--secondary-color);">@Localizer["TermsTitle"]</h1>
+        <p class="text-muted">@(isEnglish ? "Last updated: August 2026" : "آخر تحديث: أغسطس 2026")</p>
+        <hr class="my-4">
+        @if (isEnglish)
+        {
+            <h5 class="fw-bold mt-4">1. Acceptance</h5><p>By using Taly, you agree to these terms and conditions. If you do not agree, please do not use our services.</p>
+            <h5 class="fw-bold mt-4">2. Accounts</h5><p>You are responsible for keeping your account details secure and for all activity performed through your account.</p>
+            <h5 class="fw-bold mt-4">3. Orders and delivery</h5><p>Taly facilitates delivery through partner restaurants, pharmacies, supermarkets, and stores. Delivery times may vary due to traffic, weather, or operational conditions.</p>
+            <h5 class="fw-bold mt-4">4. Prices and payment</h5><p>Prices and availability may change according to partner policies. Available payment methods are shown during checkout.</p>
+            <h5 class="fw-bold mt-4">5. Updates</h5><p>We may update these terms from time to time. Continued use of the service after publication means you accept the updated terms.</p>
+        }
+        else
+        {
+            <h5 class="fw-bold mt-4">1. قبول الشروط</h5><p>باستخدامك لخدمات تالي، فإنك توافق على هذه الشروط والأحكام. إذا لم توافق عليها، يرجى عدم استخدام الخدمة.</p>
+            <h5 class="fw-bold mt-4">2. الحسابات</h5><p>أنت مسؤول عن الحفاظ على سرية بيانات حسابك وعن جميع الأنشطة التي تتم من خلاله.</p>
+            <h5 class="fw-bold mt-4">3. الطلبات والتوصيل</h5><p>تعمل تالي على تسهيل التوصيل من المطاعم والصيدليات والسوبر ماركت والمتاجر الشريكة. قد تختلف مدة التوصيل بسبب المرور أو الطقس أو ظروف التشغيل.</p>
+            <h5 class="fw-bold mt-4">4. الأسعار والدفع</h5><p>قد تتغير الأسعار والتوافر وفقاً لسياسات الشركاء، وتظهر وسائل الدفع المتاحة أثناء إتمام الطلب.</p>
+            <h5 class="fw-bold mt-4">5. التحديثات</h5><p>يجوز لنا تحديث هذه الشروط من وقت لآخر، ويُعد استمرارك في استخدام الخدمة بعد نشر التحديث موافقة على الشروط المعدلة.</p>
+        }
+    </div>
+</div>

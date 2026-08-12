@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Home" xml:space="preserve"><value>Home</value></data>
+  <data name="Services" xml:space="preserve"><value>Services</value></data>
+  <data name="Offers" xml:space="preserve"><value>Offers</value></data>
+  <data name="Partner" xml:space="preserve"><value>Join as Partner</value></data>
+  <data name="Rider" xml:space="preserve"><value>Join as Rider</value></data>
+  <data name="Support" xml:space="preserve"><value>Technical Support</value></data>
+  <data name="SwitchToArabic" xml:space="preserve"><value>العربية</value></data>
+  <data name="SwitchToEnglish" xml:space="preserve"><value>English</value></data>
+  <data name="HeroTitle" xml:space="preserve"><value>Everything you need... delivered to you</value></data>
+  <data name="HeroSubtitle" xml:space="preserve"><value>From your doorstep to your door, quickly and safely</value></data>
+  <data name="OrderNow" xml:space="preserve"><value>Order now</value></data>
+  <data name="DiscoverServices" xml:space="preserve"><value>Discover our services</value></data>
+  <data name="FeaturedServices" xml:space="preserve"><value>Our featured services</value></data>
+  <data name="ServicesIntro" xml:space="preserve"><value>A complete shopping and delivery experience for all your daily needs</value></data>
+  <data name="Restaurants" xml:space="preserve"><value>Restaurants</value></data>
+  <data name="RestaurantsDescription" xml:space="preserve"><value>Delicious meals from your favorite restaurants, delivered hot.</value></data>
+  <data name="Pharmacies" xml:space="preserve"><value>Pharmacies</value></data>
+  <data name="PharmaciesDescription" xml:space="preserve"><value>Order your medicines and health essentials easily and safely.</value></data>
+  <data name="Supermarkets" xml:space="preserve"><value>Supermarkets</value></data>
+  <data name="SupermarketsDescription" xml:space="preserve"><value>All your household groceries delivered to your door quickly.</value></data>
+  <data name="Accessories" xml:space="preserve"><value>Accessories</value></data>
+  <data name="AccessoriesDescription" xml:space="preserve"><value>Latest models and essentials from your favorite stores.</value></data>
+  <data name="LatestOffers" xml:space="preserve"><value>Latest offers</value></data>
+  <data name="DownloadApp" xml:space="preserve"><value>Download the Taly app now!</value></data>
+  <data name="DownloadAppDescription" xml:space="preserve"><value>Enjoy an easy and fast ordering experience. Track your order and get exclusive app-only offers.</value></data>
+  <data name="WhyTaly" xml:space="preserve"><value>Why choose Taly?</value></data>
+  <data name="FastDelivery" xml:space="preserve"><value>Lightning-fast delivery</value></data>
+  <data name="FastDeliveryDescription" xml:space="preserve"><value>We value your time, so we reach you as quickly as possible.</value></data>
+  <data name="SafeReliable" xml:space="preserve"><value>Safe and reliable</value></data>
+  <data name="SafeReliableDescription" xml:space="preserve"><value>Your orders arrive in excellent condition with professional riders.</value></data>
+  <data name="Support247" xml:space="preserve"><value>24/7 support</value></data>
+  <data name="Support247Description" xml:space="preserve"><value>Our customer service team is with you every step of the way.</value></data>
+  <data name="QuickLinks" xml:space="preserve"><value>Quick links</value></data>
+  <data name="OurServices" xml:space="preserve"><value>Our services</value></data>
+  <data name="ContactUs" xml:space="preserve"><value>Contact us</value></data>
+  <data name="RestaurantDelivery" xml:space="preserve"><value>Restaurant delivery</value></data>
+  <data name="OnlinePharmacy" xml:space="preserve"><value>Online pharmacy</value></data>
+  <data name="GroceryDelivery" xml:space="preserve"><value>Supermarket delivery</value></data>
+  <data name="AccessoriesStores" xml:space="preserve"><value>Accessories stores</value></data>
+  <data name="PartnerStores" xml:space="preserve"><value>Store partnerships</value></data>
+  <data name="DeliveryTeam" xml:space="preserve"><value>Delivery team</value></data>
+  <data name="WhatsAppSupport" xml:space="preserve"><value>Technical support via WhatsApp</value></data>
+  <data name="PrivacyPolicy" xml:space="preserve"><value>Privacy policy</value></data>
+  <data name="TermsConditions" xml:space="preserve"><value>Terms and conditions</value></data>
+  <data name="AllRightsReserved" xml:space="preserve"><value>All rights reserved.</value></data>
+  <data name="FooterDescription" xml:space="preserve"><value>Taly is your ideal companion for delivering everything you need from restaurants, pharmacies, and supermarkets quickly and reliably.</value></data>
+  <data name="PrivacyTitle" xml:space="preserve"><value>Privacy Policy</value></data>
+  <data name="TermsTitle" xml:space="preserve"><value>Terms and Conditions</value></data>
+  <data name="PartnerTitle" xml:space="preserve"><value>Join Taly as a Partner</value></data>
+  <data name="RiderTitle" xml:space="preserve"><value>Join Taly as a Rider</value></data>
+  <data name="ContactViaWhatsApp" xml:space="preserve"><value>Contact us via WhatsApp</value></data>
+</root>

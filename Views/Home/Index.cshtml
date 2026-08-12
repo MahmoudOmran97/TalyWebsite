@@ -1,0 +1,80 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["Home"];
+}
+
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-content">
+                <h1>@Localizer["HeroTitle"]</h1>
+                <p>@Localizer["HeroSubtitle"]. <span>@Localizer["ServicesIntro"]</span></p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="#app" class="btn btn-download btn-lg">@Localizer["OrderNow"]</a>
+                    <a href="#services" class="btn btn-outline-secondary btn-lg rounded-pill px-4">@Localizer["DiscoverServices"]</a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                <img src="~/images/anim_preview.gif" alt="Taly" class="img-fluid rounded-4 shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="section-padding">
+    <div class="container">
+        <div class="section-title">
+            <h2>@Localizer["FeaturedServices"]</h2>
+            <p class="text-muted mt-2">@Localizer["ServicesIntro"]</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3"><div class="service-card"><div class="service-icon">🍽️</div><h4>@Localizer["Restaurants"]</h4><p>@Localizer["RestaurantsDescription"]</p></div></div>
+            <div class="col-md-3"><div class="service-card"><div class="service-icon">💊</div><h4>@Localizer["Pharmacies"]</h4><p>@Localizer["PharmaciesDescription"]</p></div></div>
+            <div class="col-md-3"><div class="service-card"><div class="service-icon">🛒</div><h4>@Localizer["Supermarkets"]</h4><p>@Localizer["SupermarketsDescription"]</p></div></div>
+            <div class="col-md-3"><div class="service-card"><div class="service-icon">👜</div><h4>@Localizer["Accessories"]</h4><p>@Localizer["AccessoriesDescription"]</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="banners" class="banners-section bg-light py-5">
+    <div class="container">
+        <div class="section-title"><h2>@Localizer["LatestOffers"]</h2></div>
+        <div class="row">
+            <div class="col-md-4"><div class="banner-item"><img src="~/images/banner_general.png" alt="@Localizer["LatestOffers"]"></div></div>
+            <div class="col-md-4"><div class="banner-item"><img src="~/images/banner_pharmacy.png" alt="@Localizer["Pharmacies"]"></div></div>
+            <div class="col-md-4"><div class="banner-item"><img src="~/images/banner_accessories.png" alt="@Localizer["Accessories"]"></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="app" class="section-padding">
+    <div class="container">
+        <div class="app-section">
+            <div class="row align-items-center px-4">
+                <div class="col-lg-7">
+                    <h2 class="display-5 fw-bold mb-4">@Localizer["DownloadApp"]</h2>
+                    <p class="lead mb-4">@Localizer["DownloadAppDescription"]</p>
+                    <div class="store-buttons">
+                        <a href="#" class="store-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+                        <a href="#" class="store-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store"></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center mt-5 mt-lg-0"><img src="~/images/logo.webp" alt="Taly App" class="app-img shadow-lg" style="max-width: 300px;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container text-center">
+        <div class="row justify-content-center"><div class="col-lg-8">
+            <h2 class="fw-bold mb-4">@Localizer["WhyTaly"]</h2>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4"><div class="fs-1 mb-3">🚀</div><h5>@Localizer["FastDelivery"]</h5><p class="text-muted">@Localizer["FastDeliveryDescription"]</p></div>
+                <div class="col-md-4 mb-4"><div class="fs-1 mb-3">🛡️</div><h5>@Localizer["SafeReliable"]</h5><p class="text-muted">@Localizer["SafeReliableDescription"]</p></div>
+                <div class="col-md-4 mb-4"><div class="fs-1 mb-3">🎧</div><h5>@Localizer["Support247"]</h5><p class="text-muted">@Localizer["Support247Description"]</p></div>
+            </div>
+        </div></div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    var isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en";
+    ViewData["Title"] = Localizer["PrivacyTitle"];
+}
+<div class="container py-5" style="max-width: 900px;">
+    <div class="card border-0 shadow-sm p-5 rounded-4">
+        <h1 class="fw-bold mb-4" style="color: var(--secondary-color);">@Localizer["PrivacyTitle"]</h1>
+        <p class="text-muted">@(isEnglish ? "Last updated: August 2026" : "آخر تحديث: أغسطس 2026")</p>
+        <hr class="my-4">
+        @if (isEnglish)
+        {
+            <h5 class="fw-bold mt-4">1. Introduction</h5><p>At Taly, we respect your privacy and are committed to protecting your personal information when you use our website and application.</p>
+            <h5 class="fw-bold mt-4">2. Information we collect</h5><p>We may collect your name, phone number, address, email, order details, and location data when needed to deliver your order accurately.</p>
+            <h5 class="fw-bold mt-4">3. How we use your information</h5><p>We use your information to process and deliver orders, improve the service, communicate with you, and protect transactions and customer support.</p>
+            <h5 class="fw-bold mt-4">4. Data protection</h5><p>We apply reasonable technical and administrative safeguards to protect personal information from unauthorized access, alteration, or disclosure.</p>
+            <h5 class="fw-bold mt-4">5. Contact us</h5><p>For privacy questions, contact our support team through WhatsApp or any channel listed on this website.</p>
+        }
+        else
+        {
+            <h5 class="fw-bold mt-4">1. مقدمة</h5><p>نحن في تالي نولي اهتماماً كبيراً لخصوصيتك ونلتزم بحماية بياناتك الشخصية عند استخدام الموقع أو التطبيق.</p>
+            <h5 class="fw-bold mt-4">2. المعلومات التي نجمعها</h5><p>قد نجمع الاسم ورقم الهاتف والعنوان والبريد الإلكتروني وبيانات الطلب والموقع عند الحاجة لتنفيذ التوصيل بدقة.</p>
+            <h5 class="fw-bold mt-4">3. كيفية استخدام معلوماتك</h5><p>نستخدم بياناتك لمعالجة الطلبات وتوصيلها وتحسين الخدمة والتواصل معك وحماية المعاملات وخدمة العملاء.</p>
+            <h5 class="fw-bold mt-4">4. حماية البيانات</h5><p>نطبق إجراءات تقنية وإدارية مناسبة لحماية بياناتك من الوصول أو التعديل أو الإفصاح غير المصرح به.</p>
+            <h5 class="fw-bold mt-4">5. تواصل معنا</h5><p>للاستفسار عن الخصوصية، يمكنك التواصل مع فريق الدعم عبر واتساب أو أي قناة تواصل موضحة في الموقع.</p>
+        }
+    </div>
+</div>

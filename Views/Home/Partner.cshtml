@@ -1,0 +1,24 @@
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    var isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en";
+    ViewData["Title"] = Localizer["PartnerTitle"];
+    var message = isEnglish ? "I would like to join Taly as a partner" : "أرغب في الانضمام كشريك مع تطبيق تالي";
+}
+<div class="container py-5" style="max-width: 800px;">
+    <div class="card border-0 shadow-sm p-5 rounded-4 text-center">
+        <h1 class="fw-bold mb-3" style="color: var(--secondary-color);">@Localizer["PartnerTitle"]</h1>
+        @if (isEnglish)
+        {
+            <p class="text-muted mb-4">Grow your sales and reach more customers by joining your restaurant, pharmacy, or store to the Taly network.</p>
+            <div class="p-4 bg-light rounded-4 mb-4 text-start"><h5 class="fw-bold mb-3">Why join us?</h5><ul class="mb-0"><li>Reach a wider customer base and increase sales.</li><li>Manage products and orders through a simple dashboard.</li><li>Get continuous technical support and reliable settlements.</li></ul></div>
+        }
+        else
+        {
+            <p class="text-muted mb-4">ضاعف مبيعاتك ووصل إلى عملاء جدد من خلال انضمام مطعمك أو صيدليتك أو متجرك إلى شبكة تالي.</p>
+            <div class="p-4 bg-light rounded-4 mb-4 text-start"><h5 class="fw-bold mb-3">لماذا تنضم إلينا؟</h5><ul class="mb-0"><li>الوصول إلى قاعدة أكبر من العملاء وزيادة مبيعاتك.</li><li>إدارة المنتجات والطلبات من خلال لوحة تحكم سهلة.</li><li>دعم فني مستمر وتسويات مالية موثوقة.</li></ul></div>
+        }
+        <a href="https://wa.me/201000000000?text=@Uri.EscapeDataString(message)" target="_blank" rel="noopener" class="btn btn-download btn-lg px-5">@Localizer["ContactViaWhatsApp"]</a>
+    </div>
+</div>

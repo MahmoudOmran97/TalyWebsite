@@ -1,0 +1,127 @@
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    var isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName.Equals("en", StringComparison.OrdinalIgnoreCase);
+    var currentCulture = isEnglish ? "en" : "ar";
+    var direction = isEnglish ? "ltr" : "rtl";
+    var languageLabel = isEnglish ? Localizer["SwitchToArabic"] : Localizer["SwitchToEnglish"];
+    var nextCulture = isEnglish ? "ar" : "en";
+    var returnUrl = Context.Request.PathBase + Context.Request.Path + Context.Request.QueryString;
+}
+<!DOCTYPE html>
+<html lang="@currentCulture" dir="@direction">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Taly | تالي</title>
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/@(isEnglish ? "bootstrap.min.css" : "bootstrap.rtl.min.css")">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TalyWebsite.styles.css" asp-append-version="true" />
+    <style>
+        .social-icon img { width: 24px; height: 24px; object-fit: contain; }
+        .social-icon { padding: 8px; display: flex; align-items: center; justify-content: center; background: #222; border-radius: 10px; transition: all .3s ease; }
+        .social-icon:hover { background: var(--primary-color); transform: translateY(-3px); }
+        .language-switcher { white-space: nowrap; }
+        .support-icon { width: 20px; margin-inline-end: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo.webp" alt="Taly Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">@Localizer["Home"]</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")#services">@Localizer["Services"]</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")#banners">@Localizer["Offers"]</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Partner">@Localizer["Partner"]</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Rider">@Localizer["Rider"]</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2">
+                        <a class="btn btn-outline-secondary language-switcher" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="@nextCulture" asp-route-returnUrl="@returnUrl">@languageLabel</a>
+                        <a href="https://wa.me/201000000000?text=مرحباً، أستفسر عن خدمات تطبيق تالي" target="_blank" rel="noopener" class="btn btn-download">
+                            <img class="support-icon" src="~/images/icons/whatsapp.png" alt="WhatsApp"> @Localizer["Support"]
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-logo"><img src="~/images/logo.webp" alt="Taly Logo"></div>
+                    <p>@Localizer["FooterDescription"]</p>
+                    <div class="social-icons">
+                        @if (ViewBag.SocialLinks != null)
+                        {
+                            foreach (var link in ViewBag.SocialLinks)
+                            {
+                                <a href="@link.Url" target="_blank" rel="noopener" class="social-icon" title="@link.Title">
+                                    @if (link.Icon.StartsWith("/"))
+                                    {
+                                        <img src="@link.Icon" alt="@link.Title">
+                                    }
+                                    else
+                                    {
+                                        <span>@link.Icon</span>
+                                    }
+                                </a>
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 footer-links">
+                    <h5>@Localizer["QuickLinks"]</h5>
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Index">@Localizer["Home"]</a></li>
+                        <li><a asp-controller="Home" asp-action="Partner">@Localizer["Partner"]</a></li>
+                        <li><a asp-controller="Home" asp-action="Rider">@Localizer["Rider"]</a></li>
+                        <li><a asp-controller="Home" asp-action="Privacy">@Localizer["PrivacyPolicy"]</a></li>
+                        <li><a asp-controller="Home" asp-action="Terms">@Localizer["TermsConditions"]</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 footer-links">
+                    <h5>@Localizer["OurServices"]</h5>
+                    <ul>
+                        <li><a href="@Url.Action("Index", "Home")#services">@Localizer["RestaurantDelivery"]</a></li>
+                        <li><a href="@Url.Action("Index", "Home")#services">@Localizer["OnlinePharmacy"]</a></li>
+                        <li><a href="@Url.Action("Index", "Home")#services">@Localizer["GroceryDelivery"]</a></li>
+                        <li><a href="@Url.Action("Index", "Home")#services">@Localizer["AccessoriesStores"]</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h5>@Localizer["ContactUs"]</h5>
+                    <ul>
+                        <li><a href="https://wa.me/201000000000" target="_blank" rel="noopener">@Localizer["WhatsAppSupport"]</a></li>
+                        <li><a asp-controller="Home" asp-action="Partner">@Localizer["PartnerStores"]</a></li>
+                        <li><a asp-controller="Home" asp-action="Rider">@Localizer["DeliveryTeam"]</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"><p>&copy; @DateTime.Now.Year Taly Delivery. @Localizer["AllRightsReserved"]</p></div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

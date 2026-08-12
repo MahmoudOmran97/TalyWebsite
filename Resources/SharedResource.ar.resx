@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Home" xml:space="preserve"><value>الرئيسية</value></data>
+  <data name="Services" xml:space="preserve"><value>خدماتنا</value></data>
+  <data name="Offers" xml:space="preserve"><value>العروض</value></data>
+  <data name="Partner" xml:space="preserve"><value>انضم كشريك</value></data>
+  <data name="Rider" xml:space="preserve"><value>انضم كطيار</value></data>
+  <data name="Support" xml:space="preserve"><value>الدعم الفني</value></data>
+  <data name="SwitchToArabic" xml:space="preserve"><value>العربية</value></data>
+  <data name="SwitchToEnglish" xml:space="preserve"><value>English</value></data>
+  <data name="HeroTitle" xml:space="preserve"><value>كل اللي تحتاجه... نوصّله لك</value></data>
+  <data name="HeroSubtitle" xml:space="preserve"><value>من مكانك لحد بابك بسرعة وأمان</value></data>
+  <data name="OrderNow" xml:space="preserve"><value>اطلب الآن</value></data>
+  <data name="DiscoverServices" xml:space="preserve"><value>اكتشف خدماتنا</value></data>
+  <data name="FeaturedServices" xml:space="preserve"><value>خدماتنا المميزة</value></data>
+  <data name="ServicesIntro" xml:space="preserve"><value>نقدم لك تجربة تسوق وتوصيل متكاملة تغطي كل احتياجاتك اليومية</value></data>
+  <data name="Restaurants" xml:space="preserve"><value>مطاعم</value></data>
+  <data name="RestaurantsDescription" xml:space="preserve"><value>أشهى الوجبات من مطاعمك المفضلة نصلها لك ساخنة.</value></data>
+  <data name="Pharmacies" xml:space="preserve"><value>صيدليات</value></data>
+  <data name="PharmaciesDescription" xml:space="preserve"><value>اطلب أدويتك ومستلزماتك الصحية بسهولة وأمان.</value></data>
+  <data name="Supermarkets" xml:space="preserve"><value>سوبر ماركت</value></data>
+  <data name="SupermarketsDescription" xml:space="preserve"><value>كل مقاضي البيت نجيبها لك لحد عندك في أسرع وقت.</value></data>
+  <data name="Accessories" xml:space="preserve"><value>إكسسوارات</value></data>
+  <data name="AccessoriesDescription" xml:space="preserve"><value>أحدث الموديلات والكماليات من متاجرك المفضلة.</value></data>
+  <data name="LatestOffers" xml:space="preserve"><value>آخر العروض</value></data>
+  <data name="DownloadApp" xml:space="preserve"><value>حمّل تطبيق تالي الآن!</value></data>
+  <data name="DownloadAppDescription" xml:space="preserve"><value>استمتع بتجربة طلب سهلة وسريعة. تتبع طلبك لحظة بلحظة، واستفد من عروضنا الحصرية المتاحة فقط على التطبيق.</value></data>
+  <data name="WhyTaly" xml:space="preserve"><value>لماذا تختار تالي؟</value></data>
+  <data name="FastDelivery" xml:space="preserve"><value>توصيل فائق السرعة</value></data>
+  <data name="FastDeliveryDescription" xml:space="preserve"><value>نحن ندرك قيمة وقتك، لذا نصل إليك في أسرع وقت ممكن.</value></data>
+  <data name="SafeReliable" xml:space="preserve"><value>أمان وموثوقية</value></data>
+  <data name="SafeReliableDescription" xml:space="preserve"><value>نضمن لك وصول طلباتك بحالة ممتازة ومع طيارين محترفين.</value></data>
+  <data name="Support247" xml:space="preserve"><value>دعم 24/7</value></data>
+  <data name="Support247Description" xml:space="preserve"><value>فريق خدمة العملاء معك في كل خطوة للإجابة على استفساراتك.</value></data>
+  <data name="QuickLinks" xml:space="preserve"><value>روابط سريعة</value></data>
+  <data name="OurServices" xml:space="preserve"><value>خدماتنا</value></data>
+  <data name="ContactUs" xml:space="preserve"><value>تواصل معنا</value></data>
+  <data name="RestaurantDelivery" xml:space="preserve"><value>توصيل مطاعم</value></data>
+  <data name="OnlinePharmacy" xml:space="preserve"><value>صيدلية أونلاين</value></data>
+  <data name="GroceryDelivery" xml:space="preserve"><value>سوبر ماركت</value></data>
+  <data name="AccessoriesStores" xml:space="preserve"><value>محلات إكسسوارات</value></data>
+  <data name="PartnerStores" xml:space="preserve"><value>شراكة المطاعم والمحلات</value></data>
+  <data name="DeliveryTeam" xml:space="preserve"><value>فريق التوصيل</value></data>
+  <data name="WhatsAppSupport" xml:space="preserve"><value>الدعم الفني (واتساب)</value></data>
+  <data name="PrivacyPolicy" xml:space="preserve"><value>سياسة الخصوصية</value></data>
+  <data name="TermsConditions" xml:space="preserve"><value>الشروط والأحكام</value></data>
+  <data name="AllRightsReserved" xml:space="preserve"><value>جميع الحقوق محفوظة.</value></data>
+  <data name="FooterDescription" xml:space="preserve"><value>تطبيق تالي هو رفيقك المثالي لتوصيل كل ما تحتاجه من مطاعم وصيدليات وسوبر ماركت في أسرع وقت وبأعلى جودة.</value></data>
+  <data name="PrivacyTitle" xml:space="preserve"><value>سياسة الخصوصية</value></data>
+  <data name="TermsTitle" xml:space="preserve"><value>الشروط والأحكام</value></data>
+  <data name="PartnerTitle" xml:space="preserve"><value>انضم كشريك مع تالي</value></data>
+  <data name="RiderTitle" xml:space="preserve"><value>انضم كطيار مع تالي</value></data>
+  <data name="ContactViaWhatsApp" xml:space="preserve"><value>تواصل عبر واتساب</value></data>
+</root>
