@@ -1,6 +1,5 @@
 @using System.Globalization
-@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer Localizer
+@inject IStringLocalizer<SharedResource> Localizer
 @{
     var isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en";
     ViewData["Title"] = Localizer["TermsTitle"];

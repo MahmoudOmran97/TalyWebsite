@@ -6,10 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 builder.Services.AddControllersWithViews()
-    .AddDataAnnotationsLocalization()
-    .AddViewLocalization();
+    .AddDataAnnotationsLocalization();
 
-builder.Services.AddHttpClient<TalyWebsite.Services.SiteLinkService>();
+builder.Services.AddScoped<TalyWebsite.Services.SiteLinkService>();
 
 var app = builder.Build();
 

@@ -1,10 +1,11 @@
 @using System.Globalization
-@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer Localizer
+@inject IStringLocalizer<SharedResource> Localizer
+@inject IConfiguration Configuration
 @{
     var isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en";
     ViewData["Title"] = Localizer["PartnerTitle"];
     var message = isEnglish ? "I would like to join Taly as a partner" : "أرغب في الانضمام كشريك مع تطبيق تالي";
+    var whatsAppNumber = Configuration["ContactSettings:WhatsAppNumber"] ?? "201000000000";
 }
 <div class="container py-5" style="max-width: 800px;">
     <div class="card border-0 shadow-sm p-5 rounded-4 text-center">
@@ -19,6 +20,6 @@
             <p class="text-muted mb-4">ضاعف مبيعاتك ووصل إلى عملاء جدد من خلال انضمام مطعمك أو صيدليتك أو متجرك إلى شبكة تالي.</p>
             <div class="p-4 bg-light rounded-4 mb-4 text-start"><h5 class="fw-bold mb-3">لماذا تنضم إلينا؟</h5><ul class="mb-0"><li>الوصول إلى قاعدة أكبر من العملاء وزيادة مبيعاتك.</li><li>إدارة المنتجات والطلبات من خلال لوحة تحكم سهلة.</li><li>دعم فني مستمر وتسويات مالية موثوقة.</li></ul></div>
         }
-        <a href="https://wa.me/201000000000?text=@Uri.EscapeDataString(message)" target="_blank" rel="noopener" class="btn btn-download btn-lg px-5">@Localizer["ContactViaWhatsApp"]</a>
+        <a href="https://wa.me/@whatsAppNumber?text=@Uri.EscapeDataString(message)" target="_blank" rel="noopener" class="btn btn-download btn-lg px-5">@Localizer["ContactViaWhatsApp"]</a>
     </div>
 </div>

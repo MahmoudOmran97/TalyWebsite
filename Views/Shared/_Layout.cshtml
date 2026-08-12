@@ -1,6 +1,6 @@
 @using System.Globalization
-@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer Localizer
+@inject IStringLocalizer<SharedResource> Localizer
+@inject IConfiguration Configuration
 @{
     var isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName.Equals("en", StringComparison.OrdinalIgnoreCase);
     var currentCulture = isEnglish ? "en" : "ar";
@@ -8,6 +8,7 @@
     var languageLabel = isEnglish ? Localizer["SwitchToArabic"] : Localizer["SwitchToEnglish"];
     var nextCulture = isEnglish ? "ar" : "en";
     var returnUrl = Context.Request.PathBase + Context.Request.Path + Context.Request.QueryString;
+    var whatsAppNumber = Configuration["ContactSettings:WhatsAppNumber"] ?? "201000000000";
 }
 <!DOCTYPE html>
 <html lang="@currentCulture" dir="@direction">
@@ -50,7 +51,7 @@
                     </ul>
                     <div class="d-flex align-items-center gap-2">
                         <a class="btn btn-outline-secondary language-switcher" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="@nextCulture" asp-route-returnUrl="@returnUrl">@languageLabel</a>
-                        <a href="https://wa.me/201000000000?text=مرحباً، أستفسر عن خدمات تطبيق تالي" target="_blank" rel="noopener" class="btn btn-download">
+                        <a href="https://wa.me/@whatsAppNumber?text=مرحباً، أستفسر عن خدمات تطبيق تالي" target="_blank" rel="noopener" class="btn btn-download">
                             <img class="support-icon" src="~/images/icons/whatsapp.png" alt="WhatsApp"> @Localizer["Support"]
                         </a>
                     </div>
@@ -110,7 +111,7 @@
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h5>@Localizer["ContactUs"]</h5>
                     <ul>
-                        <li><a href="https://wa.me/201000000000" target="_blank" rel="noopener">@Localizer["WhatsAppSupport"]</a></li>
+                        <li><a href="https://wa.me/@whatsAppNumber" target="_blank" rel="noopener">@Localizer["WhatsAppSupport"]</a></li>
                         <li><a asp-controller="Home" asp-action="Partner">@Localizer["PartnerStores"]</a></li>
                         <li><a asp-controller="Home" asp-action="Rider">@Localizer["DeliveryTeam"]</a></li>
                     </ul>
