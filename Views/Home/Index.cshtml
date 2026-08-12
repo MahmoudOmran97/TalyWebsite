@@ -1,6 +1,9 @@
 @inject IStringLocalizer<SharedResource> Localizer
+@inject IConfiguration Configuration
 @{
     ViewData["Title"] = Localizer["Home"];
+    var googlePlayUrl = Configuration["AppLinks:GooglePlayUrl"] ?? "#";
+    var appStoreUrl = Configuration["AppLinks:AppStoreUrl"] ?? "#";
 }
 
 <section id="home" class="hero-section">
@@ -55,8 +58,8 @@
                     <h2 class="display-5 fw-bold mb-4">@Localizer["DownloadApp"]</h2>
                     <p class="lead mb-4">@Localizer["DownloadAppDescription"]</p>
                     <div class="store-buttons">
-                        <a href="#" class="store-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
-                        <a href="#" class="store-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store"></a>
+                        <a href="@googlePlayUrl" target="_blank" rel="noopener" class="store-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+                        <a href="@appStoreUrl" target="_blank" rel="noopener" class="store-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store"></a>
                     </div>
                 </div>
                 <div class="col-lg-5 text-center mt-5 mt-lg-0"><img src="~/images/logo.webp" alt="Taly App" class="app-img shadow-lg" style="max-width: 300px;"></div>
