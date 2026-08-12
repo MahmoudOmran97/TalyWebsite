@@ -31,10 +31,10 @@
             <p class="text-muted mt-2">@Localizer["ServicesIntro"]</p>
         </div>
         <div class="row g-4">
-            <div class="col-md-3"><div class="service-card"><div class="service-icon">🍽️</div><h4>@Localizer["Restaurants"]</h4><p>@Localizer["RestaurantsDescription"]</p></div></div>
-            <div class="col-md-3"><div class="service-card"><div class="service-icon">💊</div><h4>@Localizer["Pharmacies"]</h4><p>@Localizer["PharmaciesDescription"]</p></div></div>
-            <div class="col-md-3"><div class="service-card"><div class="service-icon">🛒</div><h4>@Localizer["Supermarkets"]</h4><p>@Localizer["SupermarketsDescription"]</p></div></div>
-            <div class="col-md-3"><div class="service-card"><div class="service-icon">👜</div><h4>@Localizer["Accessories"]</h4><p>@Localizer["AccessoriesDescription"]</p></div></div>
+            <div class="col-md-3"><a asp-controller="Home" asp-action="Service" asp-route-id="restaurants" class="service-card-link"><div class="service-card"><div class="service-icon">🍽️</div><h4>@Localizer["Restaurants"]</h4><p>@Localizer["RestaurantsDescription"]</p></div></a></div>
+            <div class="col-md-3"><a asp-controller="Home" asp-action="Service" asp-route-id="pharmacies" class="service-card-link"><div class="service-card"><div class="service-icon">💊</div><h4>@Localizer["Pharmacies"]</h4><p>@Localizer["PharmaciesDescription"]</p></div></a></div>
+            <div class="col-md-3"><a asp-controller="Home" asp-action="Service" asp-route-id="supermarkets" class="service-card-link"><div class="service-card"><div class="service-icon">🛒</div><h4>@Localizer["Supermarkets"]</h4><p>@Localizer["SupermarketsDescription"]</p></div></a></div>
+            <div class="col-md-3"><a asp-controller="Home" asp-action="Service" asp-route-id="accessories" class="service-card-link"><div class="service-card"><div class="service-icon">👜</div><h4>@Localizer["Accessories"]</h4><p>@Localizer["AccessoriesDescription"]</p></div></a></div>
         </div>
     </div>
 </section>
@@ -46,6 +46,7 @@
             <div class="col-md-4"><div class="banner-item"><img src="~/images/banner_general.png" alt="@Localizer["LatestOffers"]"></div></div>
             <div class="col-md-4"><div class="banner-item"><img src="~/images/banner_pharmacy.png" alt="@Localizer["Pharmacies"]"></div></div>
             <div class="col-md-4"><div class="banner-item"><img src="~/images/banner_accessories.png" alt="@Localizer["Accessories"]"></div></div>
+            <div class="col-md-4"><div class="banner-item"><img src="~/images/banner_supermarket.png" alt="@Localizer["Supermarkets"]"></div></div>
         </div>
     </div>
 </section>

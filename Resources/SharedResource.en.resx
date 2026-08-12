@@ -51,4 +51,8 @@
   <data name="PartnerTitle" xml:space="preserve"><value>Join Taly as a Partner</value></data>
   <data name="RiderTitle" xml:space="preserve"><value>Join Taly as a Rider</value></data>
   <data name="ContactViaWhatsApp" xml:space="preserve"><value>Contact us via WhatsApp</value></data>
+  <data name="AppName" xml:space="preserve"><value>Taly</value></data>
+  <data name="BackToHome" xml:space="preserve"><value>Back to Home</value></data>
+  <data name="ServiceOrderNow" xml:space="preserve"><value>Order now on the app</value></data>
+  <data name="OtherServices" xml:space="preserve"><value>Other services you might like</value></data>
 </root>

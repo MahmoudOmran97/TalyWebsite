@@ -125,6 +125,16 @@ body {
     border-color: var(--primary-color);
 }
 
+.service-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.service-card-link:hover {
+    color: inherit;
+}
+
 .service-icon {
     font-size: 40px;
     color: var(--primary-color);

@@ -1,0 +1,83 @@
+@using System.Globalization
+@using System.Linq
+@using TalyWebsite.Models
+@model ServiceInfo
+@inject IStringLocalizer<SharedResource> Localizer
+@inject IConfiguration Configuration
+@{
+    ViewData["Title"] = Localizer[Model.TitleResourceKey];
+    var whatsAppNumber = Configuration["ContactSettings:WhatsAppNumber"] ?? "201000000000";
+    var isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en";
+    var message = isEnglish
+        ? $"I would like to order from {Localizer[Model.TitleResourceKey]} on Taly"
+        : $"أرغب في الطلب من قسم {Localizer[Model.TitleResourceKey]} على تطبيق تالي";
+
+    var otherServices = new[] { "restaurants", "pharmacies", "supermarkets", "accessories" }
+        .Where(k => k != Model.Key);
+}
+
+<section class="section-padding" style="background-color: var(--light-bg);">
+    <div class="container">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary btn-sm rounded-pill mb-4">
+            &larr; @Localizer["BackToHome"]
+        </a>
+
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-center">
+                <div class="rounded-4 shadow-lg d-inline-flex align-items-center justify-content-center"
+                     style="width: 220px; height: 220px; background: var(--white); font-size: 100px;">
+                    @Model.Icon
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h1 class="fw-bold mb-3" style="color: var(--secondary-color);">@Localizer[Model.TitleResourceKey]</h1>
+                <p class="lead text-muted mb-4">@Localizer[Model.DescriptionResourceKey]</p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="@Url.Action("Index", "Home")#app" class="btn btn-download btn-lg">@Localizer["ServiceOrderNow"]</a>
+                    <a href="https://wa.me/@whatsAppNumber?text=@Uri.EscapeDataString(message)" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-lg rounded-pill px-4">
+                        @Localizer["ContactViaWhatsApp"]
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-item mt-5 shadow-sm">
+            <img src="~/images/@Model.BannerImage" alt="@Localizer[Model.TitleResourceKey]">
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="section-title"><h2>@Localizer["OtherServices"]</h2></div>
+        <div class="row g-4">
+            @foreach (var key in otherServices)
+            {
+                var titleKey = key switch
+                {
+                    "restaurants" => "Restaurants",
+                    "pharmacies" => "Pharmacies",
+                    "supermarkets" => "Supermarkets",
+                    "accessories" => "Accessories",
+                    _ => key
+                };
+                var icon = key switch
+                {
+                    "restaurants" => "🍽️",
+                    "pharmacies" => "💊",
+                    "supermarkets" => "🛒",
+                    "accessories" => "👜",
+                    _ => "⭐"
+                };
+                <div class="col-md-4">
+                    <a asp-controller="Home" asp-action="Service" asp-route-id="@key" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-icon">@icon</div>
+                            <h4>@Localizer[titleKey]</h4>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>

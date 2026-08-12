@@ -51,4 +51,9 @@
   <data name="PartnerTitle" xml:space="preserve"><value>انضم كشريك مع تالي</value></data>
   <data name="RiderTitle" xml:space="preserve"><value>انضم كطيار مع تالي</value></data>
   <data name="ContactViaWhatsApp" xml:space="preserve"><value>تواصل عبر واتساب</value></data>
+  <data name="AppName" xml:space="preserve"><value>تالي</value></data>
+  <data name="BackToHome" xml:space="preserve"><value>الرجوع للرئيسية</value></data>
+  <data name="ServiceOrderNow" xml:space="preserve"><value>اطلب الآن عبر التطبيق</value></data>
+  <data name="OtherServices" xml:space="preserve"><value>خدمات تانية ممكن تعجبك</value></data>
+	
 </root>

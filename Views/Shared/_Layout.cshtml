@@ -29,14 +29,16 @@
         .social-icon:hover { background: var(--primary-color); transform: translateY(-3px); }
         .language-switcher { white-space: nowrap; }
         .support-icon { width: 20px; margin-inline-end: 5px; }
+        .brand-name { color: var(--primary-color); font-weight: 800; font-size: 24px; line-height: 1; }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg sticky-top">
             <div class="container">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                <a class="navbar-brand d-flex align-items-center gap-2" asp-controller="Home" asp-action="Index">
                     <img src="~/images/logo.webp" alt="Taly Logo">
+                    <span class="brand-name">@Localizer["AppName"]</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -102,10 +104,10 @@
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 footer-links">
                     <h5>@Localizer["OurServices"]</h5>
                     <ul>
-                        <li><a href="@Url.Action("Index", "Home")#services">@Localizer["RestaurantDelivery"]</a></li>
-                        <li><a href="@Url.Action("Index", "Home")#services">@Localizer["OnlinePharmacy"]</a></li>
-                        <li><a href="@Url.Action("Index", "Home")#services">@Localizer["GroceryDelivery"]</a></li>
-                        <li><a href="@Url.Action("Index", "Home")#services">@Localizer["AccessoriesStores"]</a></li>
+                        <li><a asp-controller="Home" asp-action="Service" asp-route-id="restaurants">@Localizer["RestaurantDelivery"]</a></li>
+                        <li><a asp-controller="Home" asp-action="Service" asp-route-id="pharmacies">@Localizer["OnlinePharmacy"]</a></li>
+                        <li><a asp-controller="Home" asp-action="Service" asp-route-id="supermarkets">@Localizer["GroceryDelivery"]</a></li>
+                        <li><a asp-controller="Home" asp-action="Service" asp-route-id="accessories">@Localizer["AccessoriesStores"]</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 footer-links">
