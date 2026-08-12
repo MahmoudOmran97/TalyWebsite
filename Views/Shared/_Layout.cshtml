@@ -24,12 +24,42 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TalyWebsite.styles.css" asp-append-version="true" />
     <style>
-        .social-icon img { width: 24px; height: 24px; object-fit: contain; }
-        .social-icon { padding: 8px; display: flex; align-items: center; justify-content: center; background: #222; border-radius: 10px; transition: all .3s ease; }
-        .social-icon:hover { background: var(--primary-color); transform: translateY(-3px); }
-        .language-switcher { white-space: nowrap; }
-        .support-icon { width: 20px; margin-inline-end: 5px; }
-        .brand-name { color: var(--primary-color); font-weight: 800; font-size: 24px; line-height: 1; }
+        .social-icon img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .social-icon {
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #222;
+            border-radius: 10px;
+            transition: all .3s ease;
+        }
+
+            .social-icon:hover {
+                background: var(--primary-color);
+                transform: translateY(-3px);
+            }
+
+        .language-switcher {
+            white-space: nowrap;
+        }
+
+        .support-icon {
+            width: 20px;
+            margin-inline-end: 5px;
+        }
+
+        .brand-name {
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 1;
+        }
     </style>
 </head>
 <body>
@@ -70,7 +100,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <div class="footer-logo"><img src="~/images/logo.webp" alt="Taly Logo"></div>
+                    <div class="footer-logo d-flex align-items-center gap-2">
+                        <img src="~/images/logo.webp" alt="Taly Logo">
+                        <span class="brand-name">@Localizer["AppName"]</span>
+                    </div>
                     <p>@Localizer["FooterDescription"]</p>
                     <div class="social-icons">
                         @if (ViewBag.SocialLinks != null)

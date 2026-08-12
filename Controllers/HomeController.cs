@@ -36,7 +36,7 @@ namespace TalyWebsite.Controllers
                 Icon = "🛒",
                 TitleResourceKey = "Supermarkets",
                 DescriptionResourceKey = "SupermarketsDescription",
-                BannerImage = "banner_general.png"
+                BannerImage = "banner_supermarket.png"
             },
             ["accessories"] = new ServiceInfo
             {

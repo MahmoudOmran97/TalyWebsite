@@ -36,9 +36,9 @@ body {
     transition: var(--transition);
 }
 
-.nav-link:hover {
-    color: var(--primary-color) !important;
-}
+    .nav-link:hover {
+        color: var(--primary-color) !important;
+    }
 
 .btn-download {
     background-color: var(--primary-color);
@@ -50,11 +50,11 @@ body {
     transition: var(--transition);
 }
 
-.btn-download:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255,87,34,0.3);
-}
+    .btn-download:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255,87,34,0.3);
+    }
 
 /* Hero Section */
 .hero-section {
@@ -89,25 +89,25 @@ body {
     margin-bottom: 50px;
 }
 
-.section-title h2 {
-    font-weight: 800;
-    color: var(--secondary-color);
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
+    .section-title h2 {
+        font-weight: 800;
+        color: var(--secondary-color);
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
 
-.section-title h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: var(--primary-color);
-    border-radius: 2px;
-}
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
 
 .service-card {
     background: var(--white);
@@ -120,10 +120,10 @@ body {
     height: 100%;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-color);
-}
+    .service-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--primary-color);
+    }
 
 .service-card-link {
     display: block;
@@ -131,9 +131,9 @@ body {
     text-decoration: none;
 }
 
-.service-card-link:hover {
-    color: inherit;
-}
+    .service-card-link:hover {
+        color: inherit;
+    }
 
 .service-icon {
     font-size: 40px;
@@ -146,6 +146,12 @@ body {
     padding: 40px 0;
 }
 
+.banner-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
 .banner-item {
     border-radius: 20px;
     overflow: hidden;
@@ -153,16 +159,16 @@ body {
     margin-bottom: 30px;
 }
 
-.banner-item img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    transition: var(--transition);
-}
+    .banner-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: var(--transition);
+    }
 
-.banner-item:hover img {
-    transform: scale(1.02);
-}
+    .banner-item:hover img {
+        transform: scale(1.04);
+    }
 
 /* App Section */
 .app-section {
@@ -175,16 +181,16 @@ body {
     overflow: hidden;
 }
 
-.app-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 400px;
-    height: 400px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 50%;
-}
+    .app-section::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 400px;
+        height: 400px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 50%;
+    }
 
 .store-buttons {
     display: flex;
@@ -208,10 +214,13 @@ footer {
     padding: 80px 0 20px;
 }
 
-.footer-logo img {
-    height: 50px;
+.footer-logo {
     margin-bottom: 25px;
 }
+
+    .footer-logo img {
+        height: 50px;
+    }
 
 .footer-links h5 {
     color: var(--white);
@@ -224,20 +233,20 @@ footer {
     padding: 0;
 }
 
-.footer-links ul li {
-    margin-bottom: 12px;
-}
+    .footer-links ul li {
+        margin-bottom: 12px;
+    }
 
-.footer-links ul li a {
-    color: #b0b0b0;
-    text-decoration: none;
-    transition: var(--transition);
-}
+        .footer-links ul li a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
 
-.footer-links ul li a:hover {
-    color: var(--primary-color);
-    padding-left: 8px;
-}
+            .footer-links ul li a:hover {
+                color: var(--primary-color);
+                padding-left: 8px;
+            }
 
 .social-icons {
     display: flex;
@@ -258,10 +267,10 @@ footer {
     text-decoration: none;
 }
 
-.social-icon:hover {
-    background: var(--primary-color);
-    transform: rotate(10deg);
-}
+    .social-icon:hover {
+        background: var(--primary-color);
+        transform: rotate(10deg);
+    }
 
 .copyright {
     border-top: 1px solid #222;
